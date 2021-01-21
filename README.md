@@ -38,12 +38,11 @@ Pre-requites: Automation practice site automationpractice.com with valid credent
 Github Location: 
 Solution: 
 1.  I used Page factory so that initialization of the elements will not be bug task due to inbuilt Pagefactory.initelement method. 
-2   Modular framework in which the is separated out from code belongs to Application Under Test(AUT) to make it reusable for any further project. Maven has been used to cater this requirement
-3.  Created wrapper methods for actions to be performed on combining two actions in single method like clearing of fields before sending keys in field. These methods are used in Page classes to perform actions
-4.  Implicit wait has been used to give time to load elements 
-5.  Practice.properties acts as a placeholder for generic variables that are used in framework
-6.  User can over-ride the browser name while executing the framework via from property files 
-7. Cucumber/Html reports are used which can give the detail insight of the results
+2.  Created wrapper methods for actions to be performed on combining two actions in single method like clearing of fields before sending keys in field. These methods are used in Page classes to perform actions
+3.  Implicit wait has been used to give time to load elements 
+4.  Practice.properties acts as a placeholder for generic variables that are used in framework
+5.  User can over-ride the browser name while executing the framework via from property files 
+6. Cucumber/Html reports are used which can give the detail insight of the results
 
 Improvements:
 Like any other framework this framework too has the scope of improvements. Most of these has been skipped due to time constraints
