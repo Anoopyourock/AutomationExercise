@@ -7,26 +7,26 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.automationpractice.generics.WebDriverCommonActions;
 
-public class Homepage {
+public class HomePage {
 	private WebDriver driver;
 	@FindBy(xpath = "(//a[@title='T-shirts'])[2]")
 	private WebElement tshirt;
-	
-	public Homepage(WebDriver driver) {
+
+	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}
-	// To Perform click on T-Shirt 
-	public void clickontshirt() {
-		WebDriverCommonActions.mouseaction(driver, tshirt);
+
+	// To Perform click on T-Shirt
+	public void clickOnTshirt() {
+		WebDriverCommonActions.mouseAction(driver, tshirt);
 	}
-	
-	//To get the title of current page
-	public String titleofpage()
-	{
-		String Title=driver.getTitle();
+
+	// To get the title of current page
+	public String titleOfPage() {
+		String Title = driver.getTitle();
 		return Title;
-		
+
 	}
 
 }

@@ -12,7 +12,7 @@ public class TshirtsPage {
 	private WebElement image;
 
 	@FindBy(xpath = "//span[text()='Add to cart']")
-	private WebElement addtocart;
+	private WebElement addToCart;
 
 	@FindBy(xpath = "//a[@title='Proceed to checkout']//span[1]")
 	private WebElement checkout;
@@ -21,42 +21,45 @@ public class TshirtsPage {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}
-	//To perform scroll to the T-shirt
-	public void scrolltotshirt() {
-		WebDriverCommonActions.scrolltoelement(driver, image);
+
+	// To perform scroll to the T-shirt
+	public void scrollToTshirt() {
+		WebDriverCommonActions.scrollToElement(driver, image);
 	}
-	//To perform mouse hover option on T-shirt  
-	public void movetotshirt() {
-		
-		WebDriverCommonActions.mouseaction(driver, image);
+
+	// To perform mouse hover option on T-shirt
+	public void moveToTshirt() {
+
+		WebDriverCommonActions.mouseAction(driver, image);
 	}
+
 	// To click on cart button
 	public void clickonaddtocart() {
-		addtocart.click();
+		addToCart.click();
 	}
-	//To click on checkout 
+
+	// To click on checkout
 	public void clickoncheckOut() {
 		checkout.click();
 	}
-	//This method will perform below steps:
-	//scroll to the T-shirt
-	//mouse hover option on T-shirt 
-	//click on cart button
-	//click on checkout
-	public void tshirtpageaction() {
-		TshirtsPage tshirt = new TshirtsPage(driver);
-		tshirt.scrolltotshirt();
-		tshirt.movetotshirt();
-		tshirt.clickonaddtocart();
-		tshirt.clickoncheckOut();
+
+	// This method will perform below steps:
+	// scroll to the T-shirt
+	// mouse hover option on T-shirt
+	// click on cart button
+	// click on checkout
+	public void tshirtPageAction() {
+		scrollToTshirt();
+		moveToTshirt();
+		clickonaddtocart();
+		clickoncheckOut();
 	}
-	
-	//To get tile of page
-	public String tshirtpagetitle()
-	{
-		String tshirttitle=driver.getTitle();
-		return tshirttitle;
-		
+
+	// To get tile of page
+	public String tshirtPageTitle() {
+		String tshirtTitle = driver.getTitle();
+		return tshirtTitle;
+
 	}
 
 }

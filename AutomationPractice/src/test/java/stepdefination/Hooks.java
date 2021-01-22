@@ -8,21 +8,19 @@ import com.automationpractice.generics.PropertyFileHandle;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-public class Hooks 
-{
+public class Hooks {
 	private WebDriver driver;
-	//This method will run before scenario to setup browser
-	@Before 
-	public void openbrowser()
-	{
-		driver=BrowserSetup.choosebrowser(PropertyFileHandle.getpropertyvalue("browsername"));
+
+	// This method will run before scenario to setup browser
+	@Before
+	public void openBrowser() {
+		driver = BrowserSetup.chooseBrowser(PropertyFileHandle.getpropertyvalue("browsername"));
 	}
-	
-	//This method will run after scenario to close the browser
+
+	// This method will run after scenario to close the browser
 	@After
-	public void teardown()
-	{
+	public void tearDown() {
 		driver.quit();
 	}
-	
+
 }
